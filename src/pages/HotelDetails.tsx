@@ -292,7 +292,7 @@ const HotelDetails = () => {
                             </div>
                           </div>
                           <div className="text-right">
-                            <div className="text-2xl font-bold text-primary">${room.price}</div>
+                            <div className="text-2xl font-bold text-primary">₹{room.price.toLocaleString()}</div>
                             <div className="text-sm text-muted-foreground">per night</div>
                           </div>
                         </div>
@@ -367,7 +367,7 @@ const HotelDetails = () => {
             <Card className="sticky top-8">
               <CardContent className="p-6">
                 <div className="text-center mb-6">
-                  <div className="text-3xl font-bold text-primary mb-2">₹{hotel.pricePerNight.toLocaleString()}</div>
+                  <div className="text-3xl font-bold text-primary mb-2">${hotel.pricePerNight}</div>
                   <div className="text-sm text-muted-foreground">per night</div>
                 </div>
 
