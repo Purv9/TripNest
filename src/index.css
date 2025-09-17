@@ -8,7 +8,7 @@
 
 @layer base {
   :root {
-    /* Brand Colors - Ocean & Adventure Theme */
+    /* Brand Colors - Indian Heritage Theme */
     --background: 0 0% 100%;
     --foreground: 213 31% 15%;
 
@@ -18,23 +18,23 @@
     --popover: 0 0% 100%;
     --popover-foreground: 213 31% 15%;
 
-    /* Ocean Blue Primary */
-    --primary: 210 88% 45%;
+    /* Saffron Orange Primary */
+    --primary: 25 95% 53%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 210 88% 60%;
-    --primary-dark: 210 88% 35%;
+    --primary-light: 25 95% 65%;
+    --primary-dark: 25 95% 43%;
 
-    /* Nature Green Secondary */
-    --secondary: 142 69% 48%;
+    /* Royal Blue Secondary */
+    --secondary: 220 91% 42%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 142 69% 60%;
-    --secondary-dark: 142 69% 38%;
+    --secondary-light: 220 91% 55%;
+    --secondary-dark: 220 91% 32%;
 
-    /* Warm Accent - Sunset Orange */
-    --accent: 25 95% 58%;
+    /* Emerald Green Accent */
+    --accent: 158 64% 52%;
     --accent-foreground: 0 0% 100%;
-    --accent-light: 25 95% 70%;
-    --accent-dark: 25 95% 48%;
+    --accent-light: 158 64% 65%;
+    --accent-dark: 158 64% 42%;
 
     /* Supporting Colors */
     --muted: 210 40% 96%;
@@ -45,13 +45,13 @@
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 210 88% 45%;
+    --ring: 25 95% 53%;
 
-    /* Travel-specific gradients */
+    /* Indian Heritage gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
     --gradient-card: linear-gradient(145deg, hsl(var(--primary) / 0.05) 0%, hsl(var(--secondary) / 0.05) 100%);
-    --gradient-ocean: linear-gradient(180deg, hsl(210 88% 45%) 0%, hsl(195 100% 50%) 100%);
-    --gradient-sunset: linear-gradient(135deg, hsl(25 95% 58%) 0%, hsl(45 95% 60%) 100%);
+    --gradient-heritage: linear-gradient(180deg, hsl(25 95% 53%) 0%, hsl(220 91% 42%) 100%);
+    --gradient-festival: linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(158 64% 52%) 100%);
     
     /* Shadows */
     --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
@@ -205,6 +205,14 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .bg-heritage-gradient {
+    background: var(--gradient-heritage);
+  }
+  
+  .bg-festival-gradient {
+    background: var(--gradient-festival);
   }
 
   /* Shadows */

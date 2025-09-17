@@ -5,44 +5,43 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@/assets/hero-travel.jpg";
-import santoriniImage from "@/assets/destination-santorini.jpg";
-import baliImage from "@/assets/destination-bali.jpg";
-import alpsImage from "@/assets/destination-alps.jpg";
 
 const Home = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [travelers, setTravelers] = useState(2);
 
+  // Indian hero image - Taj Mahal at sunrise
+  const heroImage = "https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80";
+
   const featuredDestinations = [
     {
       id: 1,
-      name: "Santorini, Greece",
-      image: santoriniImage,
-      price: "$1,299",
+      name: "Taj Mahal, Agra",
+      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      price: "₹15,999",
       rating: 4.9,
-      reviews: 2847,
-      description: "Iconic white buildings and stunning sunsets over the Aegean Sea",
+      reviews: 4247,
+      description: "Marvel at the eternal symbol of love and Mughal architectural masterpiece",
       popular: true
     },
     {
       id: 2,
-      name: "Bali, Indonesia", 
-      image: baliImage,
-      price: "$899",
+      name: "Kerala Backwaters", 
+      image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      price: "₹12,999",
       rating: 4.8,
-      reviews: 1923,
-      description: "Tropical paradise with rice terraces and ancient temples",
+      reviews: 2156,
+      description: "Serene houseboat cruises through palm-fringed canals and emerald waters",
       popular: false
     },
     {
       id: 3,
-      name: "Swiss Alps",
-      image: alpsImage,
-      price: "$1,599",
+      name: "Rajasthan Golden Triangle",
+      image: "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      price: "₹18,999",
       rating: 4.9,
-      reviews: 3421,
-      description: "Breathtaking mountain landscapes and pristine alpine lakes",
+      reviews: 3821,
+      description: "Explore Delhi, Agra, and Jaipur - India's most iconic heritage circuit",
       popular: true
     }
   ];
@@ -50,57 +49,57 @@ const Home = () => {
   const popularPackages = [
     {
       id: 1,
-      title: "Mediterranean Explorer",
-      destinations: ["Greece", "Italy", "Spain"],
-      duration: "14 days",
-      price: "$2,999",
-      originalPrice: "$3,499",
+      title: "Incredible India Heritage Tour",
+      destinations: ["Delhi", "Agra", "Jaipur", "Varanasi"],
+      duration: "12 days",
+      price: "₹45,999",
+      originalPrice: "₹52,999",
       rating: 4.8,
-      image: santoriniImage,
-      included: ["Flights", "Hotels", "Meals", "Tours"]
+      image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      included: ["Flights", "Hotels", "Meals", "Guide", "Monuments"]
     },
     {
       id: 2,
-      title: "Asian Adventure",
-      destinations: ["Thailand", "Vietnam", "Cambodia"],
-      duration: "12 days", 
-      price: "$2,299",
-      originalPrice: "$2,799",
+      title: "South India Temple Trail",
+      destinations: ["Chennai", "Madurai", "Kochi", "Mysore"],
+      duration: "10 days", 
+      price: "₹32,999",
+      originalPrice: "₹38,999",
       rating: 4.7,
-      image: baliImage,
-      included: ["Flights", "Hotels", "Tours", "Transport"]
+      image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      included: ["Flights", "Hotels", "Temple Tours", "Cultural Shows"]
     },
     {
       id: 3,
-      title: "Alpine Discovery",
-      destinations: ["Switzerland", "Austria", "France"],
-      duration: "10 days",
-      price: "$3,599",
-      originalPrice: "$4,199",
+      title: "Himalayan Adventure",
+      destinations: ["Leh", "Ladakh", "Manali", "Rishikesh"],
+      duration: "14 days",
+      price: "₹55,999",
+      originalPrice: "₹65,999",
       rating: 4.9,
-      image: alpsImage,
-      included: ["Flights", "Hotels", "Meals", "Activities"]
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      included: ["Flights", "Hotels", "Trekking", "Yoga Sessions"]
     }
   ];
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      location: "New York, USA",
+      name: "Priya Sharma",
+      location: "Mumbai, India",
       rating: 5,
-      text: "TravelHub made planning our honeymoon effortless. The recommendations were perfect and the booking process was seamless!"
+      text: "TravelHub made our Golden Triangle tour absolutely magical. The heritage hotels and guided tours exceeded all expectations!"
     },
     {
-      name: "Marco Rodriguez",
-      location: "Barcelona, Spain", 
+      name: "Rajesh Kumar",
+      location: "Bangalore, India", 
       rating: 5,
-      text: "I've used TravelHub for 3 trips now. Their customer service is outstanding and the destinations are incredible."
+      text: "The Kerala backwater experience was divine. From houseboats to Ayurvedic spas, every detail was perfectly arranged."
     },
     {
-      name: "Emma Chen",
-      location: "London, UK",
+      name: "Anita Patel",
+      location: "Delhi, India",
       rating: 5,
-      text: "The best travel platform I've ever used. Great prices, amazing experiences, and reliable support throughout."
+      text: "Our Ladakh adventure was life-changing. The monasteries, landscapes, and cultural immersion were unforgettable."
     }
   ];
 
@@ -116,11 +115,11 @@ const Home = () => {
         
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 font-poppins animate-fade-up">
-            Discover Your Next
-            <span className="block text-accent"> Adventure</span>
+            Discover Incredible
+            <span className="block text-accent"> India</span>
           </h1>
           <p className="text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto animate-fade-up" style={{animationDelay: '0.2s'}}>
-            Explore breathtaking destinations, book amazing hotels, and create unforgettable memories with our comprehensive travel platform.
+            Experience the rich heritage, diverse cultures, and breathtaking landscapes of India. From the Taj Mahal to Kerala backwaters, create memories that last a lifetime.
           </p>
 
           {/* Hero Search */}
@@ -131,7 +130,7 @@ const Home = () => {
                 <div className="relative">
                   <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                   <Input
-                    placeholder="Where do you want to go?"
+                    placeholder="Delhi, Mumbai, Goa, Kerala..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="pl-10 h-12"
@@ -163,7 +162,7 @@ const Home = () => {
             </div>
             <Button className="w-full md:w-auto btn-hero px-12 py-4 text-lg">
               <Search className="w-5 h-5 mr-2" />
-              Search Adventures
+              Explore India
             </Button>
           </div>
         </div>
@@ -177,22 +176,22 @@ const Home = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                 <Map className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Explore Destinations</h3>
-              <p className="text-muted-foreground">Discover amazing places around the world</p>
+              <h3 className="text-xl font-semibold mb-2">Explore India</h3>
+              <p className="text-muted-foreground">Discover incredible destinations across India</p>
             </Link>
             <Link to="/hotels" className="travel-card p-8 text-center group">
               <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary/20 transition-colors">
                 <Hotel className="w-8 h-8 text-secondary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Book Hotels</h3>
-              <p className="text-muted-foreground">Find perfect accommodations for your stay</p>
+              <h3 className="text-xl font-semibold mb-2">Heritage Hotels</h3>
+              <p className="text-muted-foreground">Stay in palaces, forts, and luxury resorts</p>
             </Link>
             <Link to="/packages" className="travel-card p-8 text-center group">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
                 <Plane className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Tour Packages</h3>
-              <p className="text-muted-foreground">Complete travel packages with everything included</p>
+              <h3 className="text-xl font-semibold mb-2">India Tour Packages</h3>
+              <p className="text-muted-foreground">Curated experiences from Golden Triangle to Kerala</p>
             </Link>
           </div>
         </div>
@@ -202,9 +201,9 @@ const Home = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">Featured Destinations</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">Incredible India Destinations</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Discover our handpicked destinations that offer unforgettable experiences and breathtaking beauty.
+              From the majestic Himalayas to tropical beaches, explore India's diverse landscapes and rich cultural heritage.
             </p>
           </div>
           
@@ -253,7 +252,7 @@ const Home = () => {
           <div className="text-center mt-12">
             <Link to="/destinations">
               <Button variant="outline" size="lg" className="px-8">
-                View All Destinations
+                Explore All India Destinations
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
@@ -265,9 +264,9 @@ const Home = () => {
       <section className="py-20 bg-card-gradient">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Popular Tour Packages</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">India Tour Packages</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Complete travel experiences with flights, hotels, and guided tours all included.
+              Carefully crafted journeys showcasing India's heritage, culture, and natural beauty with expert guides.
             </p>
           </div>
           
@@ -281,7 +280,7 @@ const Home = () => {
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-4 right-4 bg-accent text-accent-foreground rounded-full px-3 py-1 text-sm font-semibold">
-                    Save ${(parseInt(pkg.originalPrice.replace('$', '').replace(',', '')) - parseInt(pkg.price.replace('$', '').replace(',', ''))).toLocaleString()}
+                    Save ₹{(parseInt(pkg.originalPrice.replace('₹', '').replace(',', '')) - parseInt(pkg.price.replace('₹', '').replace(',', ''))).toLocaleString()}
                   </div>
                 </div>
                 <CardContent className="p-6">
@@ -334,7 +333,7 @@ const Home = () => {
           <div className="text-center mt-12">
             <Link to="/packages">
               <Button className="btn-hero px-8">
-                Explore All Packages
+                Explore India Packages
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
@@ -346,9 +345,9 @@ const Home = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Travelers Say</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our India Travelers Say</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Real experiences from real travelers who trust TravelHub for their adventures.
+              Real experiences from travelers who discovered the magic of India with TravelHub.
             </p>
           </div>
           

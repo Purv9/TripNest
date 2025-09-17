@@ -10,99 +10,99 @@ import { Calendar, Clock, MapPin, Users, Star, Search } from "lucide-react";
 const packages = [
   {
     id: 1,
-    name: "Tropical Paradise Bali",
-    description: "Experience the magic of Bali with pristine beaches, ancient temples, and vibrant culture",
-    image: "/src/assets/package-bali.jpg",
-    price: 899,
-    duration: "7 Days",
+    name: "Golden Triangle Heritage Tour",
+    description: "Explore India's most iconic heritage circuit covering Delhi, Agra, and Jaipur with their magnificent monuments",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    price: 45999,
+    duration: "8 Days",
     maxGroupSize: 12,
     rating: 4.8,
-    reviews: 127,
-    theme: "Beach",
-    location: "Bali, Indonesia",
-    inclusions: ["Flights", "Hotels", "Meals", "Guide"],
+    reviews: 327,
+    theme: "Heritage",
+    location: "Delhi, Agra, Jaipur",
+    inclusions: ["Flights", "Heritage Hotels", "All Meals", "Expert Guide", "Monument Tickets"],
     featured: true
   },
   {
     id: 2,
-    name: "Swiss Alps Adventure",
-    description: "Conquer majestic peaks, pristine lakes, and charming alpine villages",
-    image: "/src/assets/package-alps.jpg",
-    price: 1299,
-    duration: "10 Days",
-    maxGroupSize: 8,
+    name: "Kerala Backwater & Spice Trail",
+    description: "Discover God's Own Country with serene backwaters, spice plantations, and Ayurvedic wellness",
+    image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    price: 32999,
+    duration: "7 Days",
+    maxGroupSize: 10,
     rating: 4.9,
-    reviews: 89,
-    theme: "Adventure",
-    location: "Switzerland",
-    inclusions: ["Flights", "Hotels", "Activities", "Guide"],
+    reviews: 189,
+    theme: "Nature",
+    location: "Kochi, Munnar, Alleppey",
+    inclusions: ["Flights", "Houseboats", "Ayurvedic Spa", "Spice Tour", "Traditional Meals"],
     featured: true
   },
   {
     id: 3,
-    name: "Santorini Sunset Romance",
-    description: "Romantic getaway with stunning sunsets, white-washed villages, and azure waters",
-    image: "/src/assets/package-santorini.jpg",
-    price: 1150,
-    duration: "6 Days",
-    maxGroupSize: 6,
+    name: "Rajasthan Royal Experience",
+    description: "Live like royalty in magnificent palaces, explore desert landscapes, and witness vibrant culture",
+    image: "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    price: 55999,
+    duration: "10 Days",
+    maxGroupSize: 8,
     rating: 4.7,
-    reviews: 203,
-    theme: "Romance",
-    location: "Santorini, Greece",
-    inclusions: ["Flights", "Hotels", "Meals", "Activities"],
+    reviews: 156,
+    theme: "Heritage",
+    location: "Jaipur, Udaipur, Jodhpur, Jaisalmer",
+    inclusions: ["Flights", "Palace Hotels", "Desert Safari", "Cultural Shows", "Royal Dining"],
     featured: false
   },
   {
     id: 4,
-    name: "Tokyo Cultural Immersion",
-    description: "Discover ancient traditions meets modern innovation in Japan's bustling capital",
-    image: "/src/assets/package-tokyo.jpg",
-    price: 1450,
-    duration: "8 Days",
-    maxGroupSize: 10,
+    name: "Himalayan Adventure Ladakh",
+    description: "Experience the roof of the world with high-altitude lakes, ancient monasteries, and dramatic landscapes",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    price: 48999,
+    duration: "9 Days",
+    maxGroupSize: 12,
     rating: 4.6,
-    reviews: 156,
-    theme: "Culture",
-    location: "Tokyo, Japan",
-    inclusions: ["Flights", "Hotels", "Meals", "Guide"],
+    reviews: 98,
+    theme: "Adventure",
+    location: "Leh, Nubra Valley, Pangong Lake",
+    inclusions: ["Flights", "Hotels", "Permits", "Oxygen Support", "Adventure Guide"],
     featured: false
   },
   {
     id: 5,
-    name: "African Safari Wildlife",
-    description: "Witness the Big Five and experience the raw beauty of African wilderness",
-    image: "/src/assets/package-safari.jpg",
-    price: 2100,
-    duration: "12 Days",
-    maxGroupSize: 6,
+    name: "South India Temple & Culture Trail",
+    description: "Explore ancient Dravidian temples, classical arts, and rich cultural heritage of South India",
+    image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    price: 38999,
+    duration: "11 Days",
+    maxGroupSize: 14,
     rating: 4.9,
-    reviews: 94,
-    theme: "Wildlife",
-    location: "Kenya & Tanzania",
-    inclusions: ["Flights", "Lodges", "Meals", "Safari Guide"],
+    reviews: 134,
+    theme: "Culture",
+    location: "Chennai, Madurai, Thanjavur, Kochi",
+    inclusions: ["Flights", "Hotels", "Temple Tours", "Classical Performances", "Traditional Meals"],
     featured: true
   },
   {
     id: 6,
-    name: "Iceland Northern Lights",
-    description: "Chase the Aurora Borealis and explore dramatic landscapes of fire and ice",
-    image: "/src/assets/package-iceland.jpg",
-    price: 1680,
-    duration: "9 Days",
-    maxGroupSize: 8,
+    name: "Goa Beach & Heritage Escape",
+    description: "Relax on golden beaches, explore Portuguese colonial heritage, and enjoy vibrant nightlife",
+    image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    price: 28999,
+    duration: "6 Days",
+    maxGroupSize: 16,
     rating: 4.8,
-    reviews: 112,
-    theme: "Adventure",
-    location: "Reykjavik, Iceland",
-    inclusions: ["Flights", "Hotels", "Activities", "Guide"],
+    reviews: 245,
+    theme: "Beach",
+    location: "North & South Goa",
+    inclusions: ["Flights", "Beach Resorts", "Water Sports", "Heritage Tours", "Seafood Meals"],
     featured: false
   }
 ];
 
-const themes = ["All", "Beach", "Adventure", "Culture", "Romance", "Wildlife"];
+const themes = ["All", "Heritage", "Beach", "Adventure", "Culture", "Nature", "Spiritual"];
 const durations = ["All", "5-7 Days", "8-10 Days", "11+ Days"];
-const budgets = ["All", "$500-$1000", "$1000-$1500", "$1500-$2000", "$2000+"];
+const budgets = ["All", "₹25,000-₹35,000", "₹35,000-₹45,000", "₹45,000-₹55,000", "₹55,000+"];
 
 const Packages = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -134,17 +134,17 @@ const Packages = () => {
     let matchesBudget = true;
     if (selectedBudget !== "All") {
       switch (selectedBudget) {
-        case "$500-$1000":
-          matchesBudget = pkg.price >= 500 && pkg.price <= 1000;
+        case "₹25,000-₹35,000":
+          matchesBudget = pkg.price >= 25000 && pkg.price <= 35000;
           break;
-        case "$1000-$1500":
-          matchesBudget = pkg.price >= 1000 && pkg.price <= 1500;
+        case "₹35,000-₹45,000":
+          matchesBudget = pkg.price >= 35000 && pkg.price <= 45000;
           break;
-        case "$1500-$2000":
-          matchesBudget = pkg.price >= 1500 && pkg.price <= 2000;
+        case "₹45,000-₹55,000":
+          matchesBudget = pkg.price >= 45000 && pkg.price <= 55000;
           break;
-        case "$2000+":
-          matchesBudget = pkg.price >= 2000;
+        case "₹55,000+":
+          matchesBudget = pkg.price >= 55000;
           break;
       }
     }
@@ -159,10 +159,10 @@ const Packages = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Tour Packages
+            India Tour Packages
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8">
-            Discover amazing adventures crafted just for you
+            Discover incredible India with our carefully crafted heritage and cultural journeys
           </p>
         </div>
       </section>
@@ -170,12 +170,12 @@ const Packages = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Filters Section */}
         <div className="bg-card rounded-lg shadow-elegant p-6 mb-8">
-          <h2 className="text-2xl font-semibold mb-4 text-card-foreground">Find Your Perfect Package</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-card-foreground">Find Your Perfect India Experience</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="relative">
               <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
               <Input
-                placeholder="Search packages..."
+                placeholder="Search destinations, themes..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10"
@@ -274,7 +274,7 @@ const Packages = () => {
                     <span className="text-sm text-muted-foreground">({pkg.reviews})</span>
                   </div>
                   <div className="text-right">
-                    <div className="text-2xl font-bold text-primary">${pkg.price}</div>
+                    <div className="text-2xl font-bold text-primary">₹{pkg.price.toLocaleString()}</div>
                     <div className="text-sm text-muted-foreground">per person</div>
                   </div>
                 </div>

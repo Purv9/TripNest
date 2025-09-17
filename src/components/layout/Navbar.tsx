@@ -57,7 +57,7 @@ const Navbar = () => {
               <MapPin className="w-5 h-5 text-primary-foreground" />
             </div>
             <span className="text-xl lg:text-2xl font-bold text-gradient font-poppins">
-              TravelHub
+              IncredibleIndia
             </span>
           </Link>
 
@@ -84,7 +84,7 @@ const Navbar = () => {
                 <div className="flex items-center space-x-2 bg-muted rounded-full px-4 py-2">
                   <Search className="w-4 h-4 text-muted-foreground" />
                   <Input
-                    placeholder="Search destinations..."
+                    placeholder="Search India destinations..."
                     className="border-0 bg-transparent focus:ring-0 w-48"
                     onBlur={() => setIsSearchOpen(false)}
                     autoFocus
@@ -177,7 +177,7 @@ const Navbar = () => {
                 <div className="flex items-center space-x-2 bg-muted rounded-lg px-3 py-2">
                   <Search className="w-4 h-4 text-muted-foreground" />
                   <Input
-                    placeholder="Search destinations..."
+                    placeholder="Search India destinations..."
                     className="border-0 bg-transparent focus:ring-0"
                   />
                 </div>

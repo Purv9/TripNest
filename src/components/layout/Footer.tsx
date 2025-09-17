@@ -10,12 +10,12 @@ const Footer = () => {
     <footer className="bg-foreground text-background mt-20">
       <div className="container mx-auto px-4 py-16">
         {/* Newsletter Section */}
-        <div className="bg-primary rounded-2xl p-8 mb-16 text-center">
+            <span className="text-xl font-bold text-primary">IncredibleIndia</span>
           <h3 className="text-2xl lg:text-3xl font-bold text-primary-foreground mb-4">
             Stay Updated with Travel Deals
-          </h3>
-          <p className="text-primary-foreground/80 mb-6 max-w-2xl mx-auto">
-            Get the latest travel news, destination guides, and exclusive offers delivered to your inbox.
+            Your gateway to discovering Incredible India. From heritage monuments to 
+            pristine beaches, spiritual journeys to adventure trails - explore the 
+            diverse beauty and rich culture of India with us.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <Input
@@ -35,7 +35,7 @@ const Footer = () => {
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <MapPin className="w-5 h-5 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold text-primary">TravelHub</span>
+              { name: "Heritage Hotels", path: "/hotels" },
             </Link>
             <p className="text-background/80 mb-6 leading-relaxed">
               Your trusted partner in creating unforgettable travel experiences. 
@@ -125,22 +125,22 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
+        {/* India Travel Services */}
         <div className="border-t border-background/20 pt-8">
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             <p className="text-background/80 text-center lg:text-left">
               © {currentYear} TravelHub. All rights reserved.
-            </p>
-            <div className="flex flex-wrap justify-center lg:justify-end gap-6">
-              <Link to="/privacy" className="text-background/80 hover:text-primary transition-colors">
-                Privacy Policy
+              "Heritage Tours",
+              "Palace Hotels", 
+              "Cultural Experiences",
+              "Spiritual Journeys",
               </Link>
-              <Link to="/terms" className="text-background/80 hover:text-primary transition-colors">
-                Terms of Service
+              "Festival Tours",
+              <p className="text-background/80">+91 11 4567 8900</p>
               </Link>
               <Link to="/cookies" className="text-background/80 hover:text-primary transition-colors">
-                Cookie Policy
-              </Link>
+                Connaught Place, New Delhi, India 110001
+              <p className="text-background/80">info@incredibleindia.com</p>
             </div>
           </div>
         </div>
@@ -150,3 +150,4 @@ const Footer = () => {
 };
 
 export default Footer;
+            © {currentYear} IncredibleIndia. All rights reserved.

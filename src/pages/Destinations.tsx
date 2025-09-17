@@ -6,111 +6,136 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import santoriniImage from "@/assets/destination-santorini.jpg";
-import baliImage from "@/assets/destination-bali.jpg";
-import alpsImage from "@/assets/destination-alps.jpg";
 
 const Destinations = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedContinent, setSelectedContinent] = useState("all");
+  const [selectedRegion, setSelectedRegion] = useState("all");
   const [selectedBudget, setSelectedBudget] = useState("all");
   const [selectedType, setSelectedType] = useState("all");
 
   const destinations = [
     {
       id: 1,
-      name: "Santorini, Greece",
-      country: "Greece",
-      continent: "Europe",
-      image: santoriniImage,
-      price: "$1,299",
+      name: "Taj Mahal, Agra",
+      state: "Uttar Pradesh",
+      region: "North India",
+      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      price: "₹15,999",
       rating: 4.9,
-      reviews: 2847,
-      description: "Famous for its stunning sunsets, white-washed buildings, and crystal-clear waters.",
-      type: "Beach",
+      reviews: 4247,
+      description: "Marvel at the eternal symbol of love and Mughal architectural masterpiece.",
+      type: "Heritage",
       budget: "luxury",
-      highlights: ["Blue Domes", "Sunset Views", "Wine Tasting", "Volcanic Beaches"]
+      highlights: ["Marble Inlay Work", "Mughal Gardens", "Sunrise Views", "UNESCO Site"]
     },
     {
       id: 2,
-      name: "Bali, Indonesia",
-      country: "Indonesia", 
-      continent: "Asia",
-      image: baliImage,
-      price: "$899",
+      name: "Kerala Backwaters",
+      state: "Kerala", 
+      region: "South India",
+      image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      price: "₹12,999",
       rating: 4.8,
-      reviews: 1923,
-      description: "Tropical paradise with ancient temples, lush rice terraces, and vibrant culture.",
-      type: "Cultural",
+      reviews: 2156,
+      description: "Serene houseboat cruises through palm-fringed canals and emerald waters.",
+      type: "Nature",
       budget: "moderate",
-      highlights: ["Rice Terraces", "Ancient Temples", "Beach Clubs", "Traditional Arts"]
+      highlights: ["Houseboat Stay", "Coconut Groves", "Ayurvedic Spas", "Local Cuisine"]
     },
     {
       id: 3,
-      name: "Swiss Alps",
-      country: "Switzerland",
-      continent: "Europe", 
-      image: alpsImage,
-      price: "$1,599",
+      name: "Jaipur Pink City",
+      state: "Rajasthan",
+      region: "North India", 
+      image: "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      price: "₹18,999",
       rating: 4.9,
-      reviews: 3421,
-      description: "Breathtaking mountain landscapes perfect for skiing, hiking, and photography.",
-      type: "Adventure",
+      reviews: 3821,
+      description: "Explore magnificent palaces, forts, and vibrant bazaars of the Pink City.",
+      type: "Heritage",
       budget: "luxury",
-      highlights: ["Mountain Peaks", "Alpine Lakes", "Skiing", "Scenic Railways"]
+      highlights: ["Amber Fort", "City Palace", "Hawa Mahal", "Local Handicrafts"]
     },
     {
       id: 4,
-      name: "Tokyo, Japan",
-      country: "Japan",
-      continent: "Asia",
-      image: baliImage,
-      price: "$1,199", 
+      name: "Goa Beaches",
+      state: "Goa",
+      region: "West India",
+      image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      price: "₹14,999", 
       rating: 4.7,
-      reviews: 2156,
-      description: "Modern metropolis blending ancient traditions with cutting-edge technology.",
-      type: "Cultural",
+      reviews: 2856,
+      description: "Golden beaches, Portuguese heritage, and vibrant nightlife by the Arabian Sea.",
+      type: "Beach",
       budget: "moderate",
-      highlights: ["Cherry Blossoms", "Temples", "Modern Architecture", "Cuisine"]
+      highlights: ["Beach Shacks", "Water Sports", "Portuguese Churches", "Seafood"]
     },
     {
       id: 5,
-      name: "Machu Picchu, Peru",
-      country: "Peru",
-      continent: "South America",
-      image: alpsImage,
-      price: "$1,099",
+      name: "Leh Ladakh",
+      state: "Ladakh",
+      region: "North India",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      price: "₹25,999",
       rating: 4.8,
-      reviews: 1654,
-      description: "Ancient Incan citadel set high in the Andes Mountains.",
+      reviews: 1854,
+      description: "High-altitude desert landscapes, ancient monasteries, and pristine mountain lakes.",
       type: "Adventure", 
-      budget: "moderate",
-      highlights: ["Ancient Ruins", "Inca Trail", "Andean Culture", "Llamas"]
+      budget: "luxury",
+      highlights: ["Pangong Lake", "Nubra Valley", "Buddhist Monasteries", "Mountain Passes"]
     },
     {
       id: 6,
-      name: "Safari Kenya",
-      country: "Kenya",
-      continent: "Africa",
-      image: santoriniImage,
-      price: "$2,299",
+      name: "Varanasi Ghats",
+      state: "Uttar Pradesh",
+      region: "North India",
+      image: "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      price: "₹11,999",
       rating: 4.9,
-      reviews: 987,
-      description: "Witness the Great Migration and experience incredible wildlife.",
-      type: "Adventure",
-      budget: "luxury",
-      highlights: ["Big Five", "Great Migration", "Masai Culture", "Savanna"]
+      reviews: 1987,
+      description: "Experience the spiritual heart of India along the sacred Ganges River.",
+      type: "Spiritual",
+      budget: "budget",
+      highlights: ["Ganga Aarti", "Ancient Temples", "Boat Rides", "Spiritual Experience"]
+    },
+    {
+      id: 7,
+      name: "Hampi Ruins",
+      state: "Karnataka",
+      region: "South India",
+      image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      price: "₹13,999",
+      rating: 4.6,
+      reviews: 1456,
+      description: "Explore the magnificent ruins of the Vijayanagara Empire amidst boulder landscapes.",
+      type: "Heritage",
+      budget: "moderate",
+      highlights: ["Virupaksha Temple", "Stone Chariot", "Hampi Bazaar", "Rock Formations"]
+    },
+    {
+      id: 8,
+      name: "Rishikesh",
+      state: "Uttarakhand",
+      region: "North India",
+      image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      price: "₹9,999",
+      rating: 4.7,
+      reviews: 2234,
+      description: "Yoga capital of the world nestled in the foothills of the Himalayas.",
+      type: "Spiritual",
+      budget: "budget",
+      highlights: ["Yoga Ashrams", "River Rafting", "Lakshman Jhula", "Meditation"]
     }
   ];
 
   const filteredDestinations = destinations.filter(dest => {
     const matchesSearch = dest.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                         dest.country.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesContinent = selectedContinent === "all" || dest.continent === selectedContinent;
+                         dest.state.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesRegion = selectedRegion === "all" || dest.region === selectedRegion;
     const matchesBudget = selectedBudget === "all" || dest.budget === selectedBudget;
     const matchesType = selectedType === "all" || dest.type === selectedType;
     
-    return matchesSearch && matchesContinent && matchesBudget && matchesType;
+    return matchesSearch && matchesRegion && matchesBudget && matchesType;
   });
 
   return (
@@ -118,10 +143,10 @@ const Destinations = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">Explore Destinations</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">Explore Incredible India</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Discover amazing places around the world. From tropical beaches to mountain peaks, 
-            find your perfect destination.
+            From the snow-capped Himalayas to tropical beaches, ancient temples to modern cities, 
+            discover India's incredible diversity and rich heritage.
           </p>
         </div>
 
@@ -133,7 +158,7 @@ const Destinations = () => {
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                 <Input
-                  placeholder="Search destinations..."
+                  placeholder="Search destinations, states..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10 h-12"
@@ -141,19 +166,19 @@ const Destinations = () => {
               </div>
             </div>
 
-            {/* Continent Filter */}
-            <Select value={selectedContinent} onValueChange={setSelectedContinent}>
+            {/* Region Filter */}
+            <Select value={selectedRegion} onValueChange={setSelectedRegion}>
               <SelectTrigger className="h-12">
-                <SelectValue placeholder="Continent" />
+                <SelectValue placeholder="Region" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">All Continents</SelectItem>
-                <SelectItem value="Europe">Europe</SelectItem>
-                <SelectItem value="Asia">Asia</SelectItem>
-                <SelectItem value="Africa">Africa</SelectItem>
-                <SelectItem value="North America">North America</SelectItem>
-                <SelectItem value="South America">South America</SelectItem>
-                <SelectItem value="Oceania">Oceania</SelectItem>
+                <SelectItem value="all">All Regions</SelectItem>
+                <SelectItem value="North India">North India</SelectItem>
+                <SelectItem value="South India">South India</SelectItem>
+                <SelectItem value="East India">East India</SelectItem>
+                <SelectItem value="West India">West India</SelectItem>
+                <SelectItem value="Northeast India">Northeast India</SelectItem>
+                <SelectItem value="Central India">Central India</SelectItem>
               </SelectContent>
             </Select>
 
@@ -164,9 +189,9 @@ const Destinations = () => {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Budgets</SelectItem>
-                <SelectItem value="budget">Budget ($500-$1000)</SelectItem>
-                <SelectItem value="moderate">Moderate ($1000-$1500)</SelectItem>
-                <SelectItem value="luxury">Luxury ($1500+)</SelectItem>
+                <SelectItem value="budget">Budget (₹8,000-₹15,000)</SelectItem>
+                <SelectItem value="moderate">Moderate (₹15,000-₹25,000)</SelectItem>
+                <SelectItem value="luxury">Luxury (₹25,000+)</SelectItem>
               </SelectContent>
             </Select>
 
@@ -177,22 +202,22 @@ const Destinations = () => {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Types</SelectItem>
+                <SelectItem value="Heritage">Heritage</SelectItem>
                 <SelectItem value="Beach">Beach</SelectItem>
                 <SelectItem value="Adventure">Adventure</SelectItem>
-                <SelectItem value="Cultural">Cultural</SelectItem>
-                <SelectItem value="Urban">Urban</SelectItem>
+                <SelectItem value="Spiritual">Spiritual</SelectItem>
                 <SelectItem value="Nature">Nature</SelectItem>
               </SelectContent>
             </Select>
           </div>
 
           {/* Active Filters */}
-          {(selectedContinent !== "all" || selectedBudget !== "all" || selectedType !== "all") && (
+          {(selectedRegion !== "all" || selectedBudget !== "all" || selectedType !== "all") && (
             <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-border">
               <span className="text-sm font-medium">Active filters:</span>
-              {selectedContinent !== "all" && (
-                <Badge variant="secondary" className="cursor-pointer" onClick={() => setSelectedContinent("all")}>
-                  {selectedContinent} ×
+              {selectedRegion !== "all" && (
+                <Badge variant="secondary" className="cursor-pointer" onClick={() => setSelectedRegion("all")}>
+                  {selectedRegion} ×
                 </Badge>
               )}
               {selectedBudget !== "all" && (
@@ -241,7 +266,7 @@ const Destinations = () => {
                   <div className="absolute bottom-4 left-4">
                     <div className="flex items-center text-white bg-black/50 backdrop-blur-sm rounded-full px-3 py-1">
                       <MapPin className="w-4 h-4 mr-1" />
-                      <span className="text-sm font-medium">{destination.country}</span>
+                      <span className="text-sm font-medium">{destination.state}</span>
                     </div>
                   </div>
                 </div>
@@ -294,7 +319,7 @@ const Destinations = () => {
             <Button 
               onClick={() => {
                 setSearchQuery("");
-                setSelectedContinent("all");
+                setSelectedRegion("all");
                 setSelectedBudget("all");
                 setSelectedType("all");
               }}
@@ -309,7 +334,7 @@ const Destinations = () => {
         {filteredDestinations.length > 0 && (
           <div className="text-center mt-16">
             <Button variant="outline" size="lg" className="px-8">
-              Load More Destinations
+              Discover More India
             </Button>
           </div>
         )}

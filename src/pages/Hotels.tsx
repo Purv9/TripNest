@@ -6,9 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import santoriniImage from "@/assets/destination-santorini.jpg";
-import baliImage from "@/assets/destination-bali.jpg";
-import alpsImage from "@/assets/destination-alps.jpg";
 
 const Hotels = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -20,130 +17,130 @@ const Hotels = () => {
   const hotels = [
     {
       id: 1,
-      name: "Santorini Blue Dome Resort",
-      location: "Oia, Santorini",
-      country: "Greece",
-      image: santoriniImage,
-      pricePerNight: 450,
+      name: "The Oberoi Udaivilas",
+      location: "Udaipur, Rajasthan",
+      state: "Rajasthan",
+      image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      pricePerNight: 35000,
       rating: 4.9,
-      reviews: 1247,
+      reviews: 1847,
       stars: 5,
-      type: "Resort",
-      description: "Luxury resort with iconic blue domes overlooking the Aegean Sea and spectacular sunset views.",
-      amenities: ["Free WiFi", "Pool", "Spa", "Restaurant", "Airport Transfer", "Sea View"],
-      features: ["Infinity Pool", "Private Balcony", "Sunset Views", "Fine Dining"],
+      type: "Palace Hotel",
+      description: "Magnificent palace hotel overlooking Lake Pichola with traditional Rajasthani architecture and royal hospitality.",
+      amenities: ["Free WiFi", "Pool", "Spa", "Restaurant", "Airport Transfer", "Lake View"],
+      features: ["Palace Architecture", "Lake Views", "Royal Suites", "Heritage Dining"],
       popular: true
     },
     {
       id: 2,
-      name: "Ubud Jungle Retreat",
-      location: "Ubud, Bali",
-      country: "Indonesia",
-      image: baliImage,
-      pricePerNight: 180,
+      name: "Taj Lake Palace",
+      location: "Udaipur, Rajasthan",
+      state: "Rajasthan",
+      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      pricePerNight: 45000,
       rating: 4.7,
-      reviews: 892,
-      stars: 4,
-      type: "Boutique",
-      description: "Eco-friendly boutique hotel nestled in lush tropical jungle with traditional Balinese architecture.",
-      amenities: ["Free WiFi", "Pool", "Yoga Studio", "Restaurant", "Spa", "Garden"],
-      features: ["Jungle Views", "Yoga Classes", "Organic Meals", "Nature Walks"],
+      reviews: 1292,
+      stars: 5,
+      type: "Heritage",
+      description: "Floating marble palace on Lake Pichola, offering an enchanting royal experience in the heart of Udaipur.",
+      amenities: ["Free WiFi", "Pool", "Spa", "Restaurant", "Boat Transfer", "Lake View"],
+      features: ["Floating Palace", "Marble Architecture", "Royal Dining", "Boat Access"],
       popular: false
     },
     {
       id: 3,
-      name: "Alpine Grand Hotel",
-      location: "Zermatt, Swiss Alps",
-      country: "Switzerland",
-      image: alpsImage,
-      pricePerNight: 680,
+      name: "ITC Grand Chola",
+      location: "Chennai, Tamil Nadu",
+      state: "Tamil Nadu",
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      pricePerNight: 12000,
       rating: 4.8,
-      reviews: 654,
+      reviews: 2154,
       stars: 5,
       type: "Luxury",
-      description: "Historic luxury hotel with breathtaking Matterhorn views and world-class alpine hospitality.",
-      amenities: ["Free WiFi", "Spa", "Fitness Center", "Restaurant", "Ski Storage", "Concierge"],
-      features: ["Mountain Views", "Ski-in/Ski-out", "Michelin Restaurant", "Luxury Spa"],
+      description: "Inspired by the grandeur of the Chola dynasty, this luxury hotel offers world-class amenities and South Indian hospitality.",
+      amenities: ["Free WiFi", "Spa", "Fitness Center", "Restaurant", "Business Center", "Concierge"],
+      features: ["Chola Architecture", "Multiple Restaurants", "Grand Ballroom", "Luxury Spa"],
       popular: true
     },
     {
       id: 4,
-      name: "Tokyo Modern Suites",
-      location: "Shibuya, Tokyo",
-      country: "Japan",
-      image: baliImage,
-      pricePerNight: 320,
+      name: "Wildflower Hall Shimla",
+      location: "Shimla, Himachal Pradesh",
+      state: "Himachal Pradesh",
+      image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      pricePerNight: 18000,
       rating: 4.6,
-      reviews: 1156,
-      stars: 4,
-      type: "Business",
-      description: "Contemporary hotel in the heart of Tokyo with modern amenities and easy access to major attractions.",
-      amenities: ["Free WiFi", "Fitness Center", "Restaurant", "Business Center", "Laundry", "24/7 Front Desk"],
-      features: ["City Views", "Modern Design", "Central Location", "Tech Amenities"],
+      reviews: 956,
+      stars: 5,
+      type: "Mountain Resort",
+      description: "Luxury mountain resort in the Himalayas offering breathtaking views and colonial charm in the hill station of Shimla.",
+      amenities: ["Free WiFi", "Spa", "Restaurant", "Adventure Sports", "Trekking", "Mountain Views"],
+      features: ["Himalayan Views", "Colonial Architecture", "Adventure Activities", "Luxury Spa"],
       popular: false
     },
     {
       id: 5,
-      name: "Maldives Water Villa Resort",
-      location: "North Malé Atoll",
-      country: "Maldives",
-      image: santoriniImage,
-      pricePerNight: 850,
+      name: "Kumarakom Lake Resort",
+      location: "Kumarakom, Kerala",
+      state: "Kerala",
+      image: "https://images.unsplash.com/photo-1520637836862-4d197d17c90a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      pricePerNight: 15000,
       rating: 4.9,
-      reviews: 423,
-      stars: 5,
+      reviews: 1123,
+      stars: 4,
       type: "Resort",
-      description: "Overwater villas with direct lagoon access, pristine coral reefs, and unparalleled luxury.",
-      amenities: ["Free WiFi", "Private Pool", "Spa", "Water Sports", "Fine Dining", "Butler Service"],
-      features: ["Overwater Villa", "Private Pool", "Snorkeling", "Sunset Dining"],
+      description: "Luxury backwater resort offering traditional Kerala architecture, Ayurvedic treatments, and serene lake views.",
+      amenities: ["Free WiFi", "Pool", "Ayurvedic Spa", "Backwater Cruises", "Traditional Cuisine", "Lake Views"],
+      features: ["Backwater Views", "Traditional Architecture", "Ayurvedic Treatments", "Houseboat Cruises"],
       popular: true
     },
     {
       id: 6,
-      name: "Marrakech Riad Palace",
-      location: "Medina, Marrakech",
-      country: "Morocco",
-      image: alpsImage,
-      pricePerNight: 220,
+      name: "The Leela Palace New Delhi",
+      location: "New Delhi",
+      state: "Delhi",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      pricePerNight: 22000,
       rating: 4.5,
-      reviews: 789,
-      stars: 4,
-      type: "Boutique",
-      description: "Traditional riad with authentic Moroccan architecture, beautiful courtyards, and rooftop terrace.",
-      amenities: ["Free WiFi", "Pool", "Spa", "Restaurant", "Rooftop Terrace", "Traditional Hammam"],
-      features: ["Traditional Architecture", "Rooftop Views", "Authentic Cuisine", "Cultural Experience"],
+      reviews: 1889,
+      stars: 5,
+      type: "Luxury",
+      description: "Opulent luxury hotel in the heart of Delhi, combining traditional Indian hospitality with contemporary elegance.",
+      amenities: ["Free WiFi", "Pool", "Spa", "Multiple Restaurants", "Business Center", "Concierge"],
+      features: ["Luxury Suites", "Fine Dining", "Spa Treatments", "Central Location"],
       popular: false
     },
     {
       id: 7,
-      name: "New York Central Park Hotel",
-      location: "Manhattan, New York",
-      country: "USA",
-      image: baliImage,
-      pricePerNight: 520,
+      name: "Goa Marriott Resort",
+      location: "Panaji, Goa",
+      state: "Goa",
+      image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      pricePerNight: 8500,
       rating: 4.7,
-      reviews: 2134,
+      reviews: 1634,
       stars: 4,
-      type: "Urban",
-      description: "Elegant hotel overlooking Central Park with classic New York sophistication and modern luxury.",
-      amenities: ["Free WiFi", "Fitness Center", "Restaurant", "Bar", "Concierge", "Room Service"],
-      features: ["Park Views", "Prime Location", "Classic Elegance", "Fine Dining"],
+      type: "Beach Resort",
+      description: "Beachfront resort offering Portuguese-inspired architecture, water sports, and vibrant Goan hospitality.",
+      amenities: ["Free WiFi", "Beach Access", "Pool", "Water Sports", "Restaurant", "Bar"],
+      features: ["Beach Location", "Water Sports", "Portuguese Architecture", "Goan Cuisine"],
       popular: true
     },
     {
       id: 8,
-      name: "Patagonia Eco Lodge",
-      location: "Torres del Paine",
-      country: "Chile",
-      image: alpsImage,
-      pricePerNight: 380,
+      name: "Rambagh Palace Jaipur",
+      location: "Jaipur, Rajasthan",
+      state: "Rajasthan",
+      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      pricePerNight: 28000,
       rating: 4.8,
-      reviews: 267,
-      stars: 4,
-      type: "Eco Lodge",
-      description: "Sustainable eco-lodge with stunning views of Torres del Paine National Park and glacier-fed lakes.",
-      amenities: ["Free WiFi", "Restaurant", "Hiking Guides", "Observatory", "Library", "Fireplace"],
-      features: ["Mountain Views", "Eco-Friendly", "Stargazing", "Adventure Tours"],
+      reviews: 1567,
+      stars: 5,
+      type: "Palace Hotel",
+      description: "Former residence of the Maharaja of Jaipur, now a luxury palace hotel showcasing royal Rajasthani heritage.",
+      amenities: ["Free WiFi", "Pool", "Spa", "Restaurant", "Palace Tours", "Royal Gardens"],
+      features: ["Royal Palace", "Heritage Architecture", "Maharaja Suites", "Royal Dining"],
       popular: false
     }
   ];
@@ -151,8 +148,8 @@ const Hotels = () => {
   const filteredHotels = hotels.filter(hotel => {
     const matchesSearch = hotel.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                          hotel.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         hotel.country.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesLocation = selectedLocation === "all" || hotel.country === selectedLocation;
+                         hotel.state.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesLocation = selectedLocation === "all" || hotel.state === selectedLocation;
     const matchesStars = selectedStars === "all" || hotel.stars.toString() === selectedStars;
     const matchesType = selectedType === "all" || hotel.type === selectedType;
     
@@ -160,16 +157,16 @@ const Hotels = () => {
     if (selectedPrice !== "all") {
       switch (selectedPrice) {
         case "budget":
-          matchesPrice = hotel.pricePerNight < 200;
+          matchesPrice = hotel.pricePerNight < 10000;
           break;
         case "moderate":
-          matchesPrice = hotel.pricePerNight >= 200 && hotel.pricePerNight < 400;
+          matchesPrice = hotel.pricePerNight >= 10000 && hotel.pricePerNight < 20000;
           break;
         case "luxury":
-          matchesPrice = hotel.pricePerNight >= 400 && hotel.pricePerNight < 600;
+          matchesPrice = hotel.pricePerNight >= 20000 && hotel.pricePerNight < 35000;
           break;
         case "ultra-luxury":
-          matchesPrice = hotel.pricePerNight >= 600;
+          matchesPrice = hotel.pricePerNight >= 35000;
           break;
       }
     }
@@ -189,9 +186,10 @@ const Hotels = () => {
         return <Utensils className="w-4 h-4" />;
       case "fitness center":
       case "spa":
+      case "ayurvedic spa":
         return <Dumbbell className="w-4 h-4" />;
       case "airport transfer":
-      case "ski storage":
+      case "boat transfer":
         return <Car className="w-4 h-4" />;
       default:
         return <Coffee className="w-4 h-4" />;
@@ -203,10 +201,10 @@ const Hotels = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">Luxury Hotels & Resorts</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">Heritage Hotels & Luxury Resorts</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Discover exceptional accommodations around the world. From boutique hotels to luxury resorts, 
-            find your perfect stay with world-class amenities and service.
+            Experience India's royal heritage and luxury hospitality. From palace hotels to mountain resorts, 
+            discover accommodations that blend tradition with modern luxury.
           </p>
         </div>
 
@@ -218,7 +216,7 @@ const Hotels = () => {
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                 <Input
-                  placeholder="Search hotels, locations..."
+                  placeholder="Search hotels, cities, states..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10 h-12"
@@ -233,14 +231,14 @@ const Hotels = () => {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Locations</SelectItem>
-                <SelectItem value="Greece">Greece</SelectItem>
-                <SelectItem value="Indonesia">Indonesia</SelectItem>
-                <SelectItem value="Switzerland">Switzerland</SelectItem>
-                <SelectItem value="Japan">Japan</SelectItem>
-                <SelectItem value="Maldives">Maldives</SelectItem>
-                <SelectItem value="Morocco">Morocco</SelectItem>
-                <SelectItem value="USA">USA</SelectItem>
-                <SelectItem value="Chile">Chile</SelectItem>
+                <SelectItem value="Rajasthan">Rajasthan</SelectItem>
+                <SelectItem value="Kerala">Kerala</SelectItem>
+                <SelectItem value="Goa">Goa</SelectItem>
+                <SelectItem value="Delhi">Delhi</SelectItem>
+                <SelectItem value="Tamil Nadu">Tamil Nadu</SelectItem>
+                <SelectItem value="Himachal Pradesh">Himachal Pradesh</SelectItem>
+                <SelectItem value="Uttarakhand">Uttarakhand</SelectItem>
+                <SelectItem value="Karnataka">Karnataka</SelectItem>
               </SelectContent>
             </Select>
 
@@ -264,10 +262,10 @@ const Hotels = () => {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Prices</SelectItem>
-                <SelectItem value="budget">Budget (Under $200)</SelectItem>
-                <SelectItem value="moderate">Moderate ($200-$400)</SelectItem>
-                <SelectItem value="luxury">Luxury ($400-$600)</SelectItem>
-                <SelectItem value="ultra-luxury">Ultra Luxury ($600+)</SelectItem>
+                <SelectItem value="budget">Budget (Under ₹10,000)</SelectItem>
+                <SelectItem value="moderate">Moderate (₹10,000-₹20,000)</SelectItem>
+                <SelectItem value="luxury">Luxury (₹20,000-₹35,000)</SelectItem>
+                <SelectItem value="ultra-luxury">Ultra Luxury (₹35,000+)</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -337,7 +335,7 @@ const Hotels = () => {
                   <div className="absolute bottom-4 left-4">
                     <div className="flex items-center text-white bg-black/50 backdrop-blur-sm rounded-full px-3 py-1">
                       <MapPin className="w-4 h-4 mr-1" />
-                      <span className="text-sm font-medium">{hotel.country}</span>
+                      <span className="text-sm font-medium">{hotel.state}</span>
                     </div>
                   </div>
                   <div className="absolute bottom-4 right-4">
@@ -358,7 +356,7 @@ const Hotels = () => {
                       <p className="text-sm text-muted-foreground">{hotel.location}</p>
                     </div>
                     <div className="text-right">
-                      <span className="text-2xl font-bold text-primary">${hotel.pricePerNight}</span>
+                      <span className="text-2xl font-bold text-primary">₹{hotel.pricePerNight.toLocaleString()}</span>
                       <div className="text-xs text-muted-foreground">per night</div>
                     </div>
                   </div>
@@ -430,7 +428,7 @@ const Hotels = () => {
         {filteredHotels.length > 0 && (
           <div className="text-center mt-16">
             <Button variant="outline" size="lg" className="px-8">
-              Load More Hotels
+              Discover More Heritage Hotels
             </Button>
           </div>
         )}

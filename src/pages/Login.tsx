@@ -74,10 +74,10 @@ const Login = () => {
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <MapPin className="w-6 h-6 text-primary-foreground" />
             </div>
-            <span className="text-2xl font-bold text-gradient">TravelHub</span>
+            <span className="text-2xl font-bold text-gradient">IncredibleIndia</span>
           </Link>
           <h1 className="text-3xl font-bold mb-2">Welcome Back</h1>
-          <p className="text-muted-foreground">Sign in to your account to continue</p>
+          <p className="text-muted-foreground">Sign in to explore Incredible India</p>
         </div>
 
         <Card className="shadow-lg">
