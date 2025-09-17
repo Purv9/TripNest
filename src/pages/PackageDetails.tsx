@@ -376,7 +376,7 @@ const PackageDetails = () => {
                 <CardTitle className="flex items-center justify-between">
                   Book This Package
                   <div className="text-right">
-                    <div className="text-3xl font-bold text-primary mb-2">₹{packageData.price.toLocaleString()}</div>
+                    <div className="text-2xl font-bold text-primary">${packageData.price}</div>
                     <div className="text-sm text-muted-foreground">per person</div>
                   </div>
                 </CardTitle>
