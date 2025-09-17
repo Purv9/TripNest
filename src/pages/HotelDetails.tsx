@@ -292,7 +292,7 @@ const HotelDetails = () => {
                             </div>
                           </div>
                           <div className="text-right">
-                            <div className="text-2xl font-bold text-primary">₹{room.price.toLocaleString()}</div>
+                            <div className="text-2xl font-bold text-primary">${room.price}</div>
                             <div className="text-sm text-muted-foreground">per night</div>
                           </div>
                         </div>
@@ -426,15 +426,15 @@ const HotelDetails = () => {
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <Phone className="w-5 h-5 text-primary" />
-                    <span className="text-sm">+30 22860 71234</span>
+                    <span className="text-sm">+91 294 243 3300</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Mail className="w-5 h-5 text-primary" />
-                    <span className="text-sm">info@santoriniblue.com</span>
+                    <span className="text-sm">reservations@oberoihotels.com</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <MapPin className="w-5 h-5 text-primary" />
-                    <span className="text-sm">Oia Village, Santorini</span>
+                    <span className="text-sm">Udaipur, Rajasthan</span>
                   </div>
                 </div>
               </CardContent>

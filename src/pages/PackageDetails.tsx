@@ -466,11 +466,11 @@ const PackageDetails = () => {
                 <div className="space-y-2">
                   <Button variant="outline" className="w-full justify-start">
                     <Phone className="h-4 w-4 mr-2" />
-                    Call us: +1 (555) 123-4567
+                    Call us: +91 11 4567 8900
                   </Button>
                   <Button variant="outline" className="w-full justify-start">
                     <Mail className="h-4 w-4 mr-2" />
-                    Email: packages@travel.com
+                    Email: packages@incredibleindia.com
                   </Button>
                 </div>
               </CardContent>
