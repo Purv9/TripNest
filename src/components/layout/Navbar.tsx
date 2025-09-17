@@ -3,10 +3,22 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Search, User, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { 
+  DropdownMenu, 
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuSeparator, 
+  DropdownMenuTrigger 
+} from "@/components/ui/dropdown-menu";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [user, setUser] = useState(() => {
+    const userData = localStorage.getItem('user');
+    return userData ? JSON.parse(userData) : null;
+  });
   const location = useLocation();
 
   const navItems = [
@@ -19,6 +31,21 @@ const Navbar = () => {
   ];
 
   const isActive = (path: string) => location.pathname === path;
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    setUser(null);
+    window.location.href = '/';
+  };
+
+  const getDashboardPath = (role: string) => {
+    switch (role) {
+      case 'package-provider': return '/dashboard/package-provider';
+      case 'hotel-management': return '/dashboard/hotel-management';
+      case 'admin': return '/dashboard/admin';
+      default: return '/';
+    }
+  };
 
   return (
     <nav className="nav-glass sticky top-0 z-50 transition-all duration-300">
@@ -75,14 +102,44 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Auth Buttons */}
-            <Button variant="ghost" className="hover:bg-muted">
-              <User className="w-4 h-4 mr-2" />
-              Login
-            </Button>
-            <Button className="btn-hero">
-              Sign Up
-            </Button>
+            {/* Auth Section */}
+            {user ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+                    <Avatar className="h-8 w-8">
+                      <AvatarFallback>
+                        {user.name.split(' ').map((n: string) => n[0]).join('').toUpperCase()}
+                      </AvatarFallback>
+                    </Avatar>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-56" align="end" forceMount>
+                  <div className="flex items-center justify-start gap-2 p-2">
+                    <div className="flex flex-col space-y-1 leading-none">
+                      <p className="font-medium">{user.name}</p>
+                      <p className="w-[200px] truncate text-sm text-muted-foreground">
+                        {user.email}
+                      </p>
+                    </div>
+                  </div>
+                  <DropdownMenuSeparator />
+                  {user.role !== 'tourist' && (
+                    <DropdownMenuItem asChild>
+                      <Link to={getDashboardPath(user.role)}>Dashboard</Link>
+                    </DropdownMenuItem>
+                  )}
+                  <DropdownMenuItem onClick={handleLogout}>
+                    Log out
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <>
+                <Link to="/login"><Button variant="ghost">Login</Button></Link>
+                <Link to="/signup"><Button className="btn-hero">Sign Up</Button></Link>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -128,13 +185,23 @@ const Navbar = () => {
               
               {/* Mobile Auth */}
               <div className="px-4 pt-4 border-t border-border space-y-2">
-                <Button variant="outline" className="w-full">
-                  <User className="w-4 h-4 mr-2" />
-                  Login
-                </Button>
-                <Button className="w-full btn-hero">
-                  Sign Up
-                </Button>
+                {user ? (
+                  <>
+                    <div className="text-center py-2">
+                      <p className="font-medium">{user.name}</p>
+                      <p className="text-sm text-muted-foreground">{user.email}</p>
+                    </div>
+                    {user.role !== 'tourist' && (
+                      <Link to={getDashboardPath(user.role)}><Button variant="outline" className="w-full">Dashboard</Button></Link>
+                    )}
+                    <Button variant="outline" className="w-full" onClick={handleLogout}>Logout</Button>
+                  </>
+                ) : (
+                  <>
+                    <Link to="/login"><Button variant="outline" className="w-full">Login</Button></Link>
+                    <Link to="/signup"><Button className="w-full btn-hero">Sign Up</Button></Link>
+                  </>
+                )}
               </div>
             </div>
           </div>
