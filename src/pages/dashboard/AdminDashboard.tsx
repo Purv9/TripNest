@@ -37,83 +37,83 @@ const AdminDashboard = () => {
   const packages = [
     {
       id: 1,
-      name: "Tropical Paradise Bali",
-      provider: "Adventure Tours Co.",
-      location: "Bali, Indonesia",
-      price: 899,
+      name: "Golden Triangle Heritage Tour",
+      provider: "India Heritage Tours",
+      location: "Delhi, Agra, Jaipur",
+      price: 45999,
       bookings: 45,
       rating: 4.8,
       status: "active",
-      theme: "Beach"
+      theme: "Heritage"
     },
     {
       id: 2,
-      name: "Swiss Alps Adventure",
-      provider: "Mountain Explorers",
-      location: "Switzerland",
-      price: 1299,
+      name: "Kerala Backwater Experience",
+      provider: "Kerala Nature Tours",
+      location: "Kochi, Munnar, Alleppey",
+      price: 32999,
       bookings: 23,
       rating: 4.9,
       status: "active",
-      theme: "Adventure"
+      theme: "Nature"
     },
     {
       id: 3,
-      name: "Tokyo Cultural Tour",
-      provider: "Cultural Journeys",
-      location: "Tokyo, Japan",
-      price: 1450,
+      name: "Rajasthan Royal Circuit",
+      provider: "Royal India Tours",
+      location: "Jaipur, Udaipur, Jodhpur",
+      price: 55999,
       bookings: 18,
       rating: 4.6,
       status: "pending",
-      theme: "Culture"
+      theme: "Heritage"
     }
   ];
 
   const hotels = [
     {
       id: 1,
-      name: "Santorini Blue Dome Resort",
-      manager: "Aegean Hospitality",
-      location: "Oia, Santorini",
-      pricePerNight: 450,
+      name: "The Oberoi Udaivilas",
+      manager: "Oberoi Hotels",
+      location: "Udaipur, Rajasthan",
+      pricePerNight: 35000,
       bookings: 89,
       rating: 4.9,
       status: "active",
       stars: 5,
-      type: "Resort"
+      type: "Palace Hotel"
     },
     {
       id: 2,
-      name: "Ubud Jungle Retreat",
-      manager: "Bali Eco Hotels",
-      location: "Ubud, Bali",
-      pricePerNight: 180,
+      name: "Kumarakom Lake Resort",
+      manager: "Kerala Resorts",
+      location: "Kumarakom, Kerala",
+      pricePerNight: 15000,
       bookings: 67,
       rating: 4.7,
       status: "active",
       stars: 4,
-      type: "Boutique"
+      type: "Resort"
     },
     {
       id: 3,
-      name: "Tokyo Modern Suites",
-      manager: "Urban Stay Group",
-      location: "Shibuya, Tokyo",
-      pricePerNight: 320,
+      name: "ITC Grand Chola",
+      manager: "ITC Hotels",
+      location: "Chennai, Tamil Nadu",
+      pricePerNight: 12000,
       bookings: 45,
       rating: 4.6,
       status: "pending",
-      stars: 4,
-      type: "Business"
+      stars: 5,
+      type: "Luxury"
     }
   ];
 
   const users = [
     {
       id: 1,
-      name: "John Smith",
-      email: "john@example.com",
+      name: "Priya Sharma",
+      email: "priya@example.com",
       role: "tourist",
       joinDate: "2024-01-15",
       bookings: 3,
@@ -121,8 +121,8 @@ const AdminDashboard = () => {
     },
     {
       id: 2,
-      name: "Adventure Tours Co.",
-      email: "info@adventuretours.com",
+      name: "India Heritage Tours",
+      email: "info@indiaheritage.com",
       role: "package-provider",
       joinDate: "2023-08-20",
       packages: 12,
@@ -130,8 +130,8 @@ const AdminDashboard = () => {
     },
     {
       id: 3,
-      name: "Aegean Hospitality",
-      email: "contact@aegean.com",
+      name: "Oberoi Hotels",
+      email: "contact@oberoi.com",
       role: "hotel-management",
       joinDate: "2023-06-10",
       hotels: 5,
@@ -206,7 +206,7 @@ const AdminDashboard = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-muted-foreground">Total Revenue</p>
-                  <p className="text-2xl font-bold">${(stats.totalRevenue / 1000000).toFixed(1)}M</p>
+                  <p className="text-2xl font-bold">₹{(stats.totalRevenue / 10000000).toFixed(1)}Cr</p>
                 </div>
                 <DollarSign className="h-8 w-8 text-green-500" />
               </div>

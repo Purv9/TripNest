@@ -10,9 +10,11 @@ const Footer = () => {
     <footer className="bg-foreground text-background mt-20">
       <div className="container mx-auto px-4 py-16">
         {/* Newsletter Section */}
-            <span className="text-xl font-bold text-primary">IncredibleIndia</span>
+        <div className="text-center mb-12">
           <h3 className="text-2xl lg:text-3xl font-bold text-primary-foreground mb-4">
-            Stay Updated with Travel Deals
+            Stay Updated with India Travel Deals
+          </h3>
+          <p className="text-background/80 mb-6 max-w-2xl mx-auto">
             Your gateway to discovering Incredible India. From heritage monuments to 
             pristine beaches, spiritual journeys to adventure trails - explore the 
             diverse beauty and rich culture of India with us.
@@ -35,12 +37,11 @@ const Footer = () => {
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <MapPin className="w-5 h-5 text-primary-foreground" />
               </div>
-              { name: "Heritage Hotels", path: "/hotels" },
+              <span className="text-xl font-bold text-primary">IncredibleIndia</span>
             </Link>
             <p className="text-background/80 mb-6 leading-relaxed">
-              Your trusted partner in creating unforgettable travel experiences. 
-              Discover amazing destinations, book perfect accommodations, and plan 
-              your dream adventures with ease.
+              Your trusted partner in exploring Incredible India. Discover heritage monuments, 
+              book authentic experiences, and plan your dream Indian adventure with local expertise.
             </p>
             <div className="flex space-x-4">
               <Button variant="ghost" size="icon" className="hover:bg-background/10">
@@ -60,15 +61,15 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-primary">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-6 text-primary">Explore India</h4>
             <ul className="space-y-3">
               {[
-                { name: "Destinations", path: "/destinations" },
-                { name: "Tour Packages", path: "/packages" },
-                { name: "Hotels", path: "/hotels" },
+                { name: "India Destinations", path: "/destinations" },
+                { name: "India Tour Packages", path: "/packages" },
+                { name: "Heritage Hotels", path: "/hotels" },
                 { name: "Travel Blog", path: "/blog" },
-                { name: "About Us", path: "/about" },
-                { name: "Contact", path: "/contact" },
+                { name: "About India", path: "/about" },
+                { name: "Contact Us", path: "/contact" },
               ].map((link) => (
                 <li key={link.path}>
                   <Link
@@ -84,15 +85,15 @@ const Footer = () => {
 
           {/* Travel Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-primary">Services</h4>
+            <h4 className="text-lg font-semibold mb-6 text-primary">India Services</h4>
             <ul className="space-y-3">
               {[
-                "Flight Booking",
-                "Hotel Reservation", 
-                "Car Rental",
-                "Tour Packages",
-                "Travel Insurance",
-                "Visa Assistance",
+                "Domestic Flights",
+                "Heritage Hotels", 
+                "India Car Rental",
+                "Cultural Tours",
+                "India Travel Insurance",
+                "India Visa Assistance",
               ].map((service) => (
                 <li key={service}>
                   <span className="text-background/80 hover:text-primary transition-colors cursor-pointer">
@@ -110,39 +111,26 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                 <p className="text-background/80">
-                  123 Travel Street, Adventure City, AC 12345
+                  Connaught Place, New Delhi, India 110001
                 </p>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <p className="text-background/80">+1 (555) 123-4567</p>
+                <p className="text-background/80">+91 11 4567 8900</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <p className="text-background/80">info@travelhub.com</p>
+                <p className="text-background/80">info@incredibleindia.com</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* India Travel Services */}
-        <div className="border-t border-background/20 pt-8">
-          <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
-            <p className="text-background/80 text-center lg:text-left">
-              © {currentYear} TravelHub. All rights reserved.
-              "Heritage Tours",
-              "Palace Hotels", 
-              "Cultural Experiences",
-              "Spiritual Journeys",
-              </Link>
-              "Festival Tours",
-              <p className="text-background/80">+91 11 4567 8900</p>
-              </Link>
-              <Link to="/cookies" className="text-background/80 hover:text-primary transition-colors">
-                Connaught Place, New Delhi, India 110001
-              <p className="text-background/80">info@incredibleindia.com</p>
-            </div>
-          </div>
+        {/* Footer Bottom */}
+        <div className="border-t border-background/20 pt-8 text-center">
+          <p className="text-background/80">
+            © {currentYear} IncredibleIndia. All rights reserved. | Discover the magic of India with us.
+          </p>
         </div>
       </div>
     </footer>
@@ -150,4 +138,3 @@ const Footer = () => {
 };
 
 export default Footer;
-            © {currentYear} IncredibleIndia. All rights reserved.

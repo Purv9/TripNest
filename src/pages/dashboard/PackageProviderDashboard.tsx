@@ -27,27 +27,27 @@ const PackageProviderDashboard = () => {
   const [packages, setPackages] = useState([
     {
       id: 1,
-      name: "Tropical Paradise Bali",
-      location: "Bali, Indonesia",
-      duration: "7 Days",
-      price: 899,
+      name: "Golden Triangle Heritage Tour",
+      location: "Delhi, Agra, Jaipur",
+      duration: "8 Days",
+      price: 45999,
       maxGroupSize: 12,
       status: "active",
       bookings: 45,
       rating: 4.8,
-      theme: "Beach"
+      theme: "Heritage"
     },
     {
       id: 2,
-      name: "Swiss Alps Adventure",
-      location: "Switzerland",
-      duration: "10 Days",
-      price: 1299,
-      maxGroupSize: 8,
+      name: "Kerala Backwater Experience",
+      location: "Kochi, Munnar, Alleppey",
+      duration: "7 Days",
+      price: 32999,
+      maxGroupSize: 10,
       status: "active",
       bookings: 23,
       rating: 4.9,
-      theme: "Adventure"
+      theme: "Nature"
     }
   ]);
 
@@ -139,7 +139,7 @@ const PackageProviderDashboard = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-muted-foreground">Total Revenue</p>
-                  <p className="text-2xl font-bold">${totalRevenue.toLocaleString()}</p>
+                  <p className="text-2xl font-bold">₹{totalRevenue.toLocaleString()}</p>
                 </div>
                 <DollarSign className="h-8 w-8 text-accent" />
               </div>
@@ -239,11 +239,12 @@ const PackageProviderDashboard = () => {
                           <SelectValue placeholder="Select theme" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="Beach">Beach</SelectItem>
+                          <SelectItem value="Heritage">Heritage</SelectItem>
+                          <SelectItem value="Nature">Nature</SelectItem>
                           <SelectItem value="Adventure">Adventure</SelectItem>
                           <SelectItem value="Culture">Culture</SelectItem>
-                          <SelectItem value="Romance">Romance</SelectItem>
-                          <SelectItem value="Wildlife">Wildlife</SelectItem>
+                          <SelectItem value="Spiritual">Spiritual</SelectItem>
+                          <SelectItem value="Beach">Beach</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>

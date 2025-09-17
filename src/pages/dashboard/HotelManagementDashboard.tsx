@@ -27,26 +27,26 @@ const HotelManagementDashboard = () => {
   const [hotels, setHotels] = useState([
     {
       id: 1,
-      name: "Santorini Blue Dome Resort",
-      location: "Oia, Santorini",
+      name: "The Oberoi Udaivilas",
+      location: "Udaipur, Rajasthan",
       stars: 5,
-      pricePerNight: 450,
+      pricePerNight: 35000,
       status: "active",
       bookings: 89,
       rating: 4.9,
-      type: "Resort",
+      type: "Palace Hotel",
       rooms: 45
     },
     {
       id: 2,
-      name: "Ubud Jungle Retreat",
-      location: "Ubud, Bali",
+      name: "Kumarakom Lake Resort",
+      location: "Kumarakom, Kerala",
       stars: 4,
-      pricePerNight: 180,
+      pricePerNight: 15000,
       status: "active",
       bookings: 67,
       rating: 4.7,
-      type: "Boutique",
+      type: "Resort",
       rooms: 25
     }
   ]);
@@ -140,7 +140,7 @@ const HotelManagementDashboard = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-muted-foreground">Total Revenue</p>
-                  <p className="text-2xl font-bold">${totalRevenue.toLocaleString()}</p>
+                  <p className="text-2xl font-bold">₹{totalRevenue.toLocaleString()}</p>
                 </div>
                 <DollarSign className="h-8 w-8 text-accent" />
               </div>
@@ -244,8 +244,10 @@ const HotelManagementDashboard = () => {
                           <SelectValue placeholder="Select type" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="Resort">Resort</SelectItem>
+                          <SelectItem value="Palace Hotel">Palace Hotel</SelectItem>
+                          <SelectItem value="Heritage">Heritage</SelectItem>
                           <SelectItem value="Boutique">Boutique</SelectItem>
+                          <SelectItem value="Resort">Resort</SelectItem>
                           <SelectItem value="Business">Business</SelectItem>
                           <SelectItem value="Luxury">Luxury</SelectItem>
                           <SelectItem value="Budget">Budget</SelectItem>

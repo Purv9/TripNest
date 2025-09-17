@@ -21,80 +21,80 @@ const DestinationDetails = () => {
   // Mock destination data - in real app this would come from API
   const destination = {
     id: 1,
-    name: "Santorini, Greece",
-    country: "Greece",
-    image: santoriniImage,
+    name: "Taj Mahal, Agra",
+    country: "India",
+    image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     gallery: [santoriniImage, baliImage, alpsImage, santoriniImage],
-    price: "$1,299",
+    price: "₹15,999",
     rating: 4.9,
     reviewCount: 2847,
-    description: "Santorini, officially Thira, is a Greek island in the southern Aegean Sea, about 200 km southeast from Greece's mainland. It is the largest island of a small, circular archipelago formed by the Santorini caldera.",
-    longDescription: "Famous for its stunning sunsets, white-washed buildings perched on dramatic cliffs, and crystal-clear waters, Santorini is one of the most romantic destinations in the world. The island offers a perfect blend of natural beauty, rich history, and luxurious amenities. From exploring ancient ruins to wine tasting in traditional vineyards, Santorini provides unforgettable experiences for every traveler.",
+    description: "The Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1632 by the Mughal emperor Shah Jahan to house the tomb of his favourite wife, Mumtaz Mahal.",
+    longDescription: "Famous for its stunning architecture, intricate marble inlay work, and romantic history, the Taj Mahal is one of the most iconic monuments in the world. This UNESCO World Heritage Site offers a perfect blend of Mughal architecture, Persian, Turkish and Indian architectural styles. From exploring the main mausoleum to walking through the beautiful gardens, the Taj Mahal provides unforgettable experiences for every traveler.",
     highlights: [
-      "Iconic blue-domed churches and white buildings",
-      "Breathtaking sunsets from Oia village", 
-      "Volcanic beaches with unique black and red sand",
-      "World-class wineries and local cuisine",
-      "Ancient Akrotiri archaeological site",
-      "Luxury resorts and infinity pools"
+      "Iconic white marble mausoleum",
+      "Intricate inlay work and calligraphy", 
+      "Beautiful Mughal gardens with fountains",
+      "Stunning sunrise and sunset views",
+      "UNESCO World Heritage Site",
+      "Symbol of eternal love"
     ],
-    bestTimeToVisit: "April to October (Peak: July-August)",
-    duration: "3-5 days",
-    currency: "Euro (€)",
-    language: "Greek",
-    timezone: "GMT+2",
+    bestTimeToVisit: "October to March (Peak: November-February)",
+    duration: "1-2 days",
+    currency: "Indian Rupee (₹)",
+    language: "Hindi, English",
+    timezone: "GMT+5:30",
     weather: {
-      temperature: "28°C",
+      temperature: "25°C",
       condition: "Sunny",
-      humidity: "65%",
-      wind: "12 km/h"
+      humidity: "60%",
+      wind: "8 km/h"
     },
     attractions: [
       {
-        name: "Oia Village",
-        description: "Famous for spectacular sunsets and traditional architecture",
+        name: "Main Mausoleum",
+        description: "The central white marble tomb with intricate inlay work",
         rating: 4.9
       },
       {
-        name: "Red Beach",
-        description: "Unique red volcanic sand beach with dramatic cliffs",
+        name: "Mughal Gardens",
+        description: "Beautiful charbagh gardens with fountains and cypress trees",
         rating: 4.7
       },
       {
-        name: "Akrotiri Archaeological Site",
-        description: "Ancient Minoan Bronze Age settlement preserved by volcanic ash",
+        name: "Red Fort Agra",
+        description: "Historic fortified palace and UNESCO World Heritage Site",
         rating: 4.6
       },
       {
-        name: "Fira Town",
-        description: "Capital city with shopping, dining, and cliff-top views",
+        name: "Agra Fort",
+        description: "Mughal fort with palaces, mosques, and audience halls",
         rating: 4.8
       }
     ],
     reviews: [
       {
         id: 1,
-        user: "Sarah Johnson",
+        user: "Priya Sharma",
         avatar: "/api/placeholder/40/40",
         rating: 5,
         date: "March 2024",
-        comment: "Absolutely magical! The sunsets in Oia are breathtaking and the hospitality is incredible. Can't wait to return!"
+        comment: "Absolutely magical! The Taj Mahal at sunrise is breathtaking and the guide was incredibly knowledgeable. A must-visit!"
       },
       {
         id: 2,
-        user: "Marco Rodriguez", 
+        user: "Rajesh Kumar", 
         avatar: "/api/placeholder/40/40",
         rating: 5,
         date: "February 2024",
-        comment: "Perfect honeymoon destination. The views, food, and romantic atmosphere exceeded all expectations."
+        comment: "Perfect romantic destination. The architecture, history, and atmosphere exceeded all expectations."
       },
       {
         id: 3,
-        user: "Emma Chen",
+        user: "Anita Patel",
         avatar: "/api/placeholder/40/40", 
         rating: 4,
         date: "January 2024",
-        comment: "Beautiful island with amazing architecture. A bit crowded in summer but still worth visiting."
+        comment: "Beautiful monument with amazing architecture. A bit crowded during peak hours but still worth visiting."
       }
     ]
   };

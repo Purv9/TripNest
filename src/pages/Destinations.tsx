@@ -25,7 +25,7 @@ const Destinations = () => {
       reviews: 4247,
       description: "Marvel at the eternal symbol of love and Mughal architectural masterpiece.",
       type: "Heritage",
-      budget: "luxury",
+      budget: "moderate",
       highlights: ["Marble Inlay Work", "Mughal Gardens", "Sunrise Views", "UNESCO Site"]
     },
     {

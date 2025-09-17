@@ -17,16 +17,16 @@ const Home = () => {
     {
       id: 1,
       name: "Taj Mahal, Agra",
-      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       price: "₹15,999",
       rating: 4.9,
       reviews: 4247,
-      description: "Marvel at the eternal symbol of love and Mughal architectural masterpiece",
+      description: "Marvel at the eternal symbol of love and Mughal architectural masterpiece in the heart of India",
       popular: true
     },
     {
       id: 2,
-      name: "Kerala Backwaters", 
+      name: "Kerala Backwaters",
       image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       price: "₹12,999",
       rating: 4.8,
@@ -36,12 +36,12 @@ const Home = () => {
     },
     {
       id: 3,
-      name: "Rajasthan Golden Triangle",
+      name: "Rajasthan Royal Circuit",
       image: "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       price: "₹18,999",
       rating: 4.9,
       reviews: 3821,
-      description: "Explore Delhi, Agra, and Jaipur - India's most iconic heritage circuit",
+      description: "Explore the royal palaces, forts, and vibrant culture of Rajasthan's majestic cities",
       popular: true
     }
   ];
@@ -87,7 +87,7 @@ const Home = () => {
       name: "Priya Sharma",
       location: "Mumbai, India",
       rating: 5,
-      text: "TravelHub made our Golden Triangle tour absolutely magical. The heritage hotels and guided tours exceeded all expectations!"
+      text: "IncredibleIndia made our Golden Triangle tour absolutely magical. The heritage hotels and guided tours exceeded all expectations!"
     },
     {
       name: "Rajesh Kumar",

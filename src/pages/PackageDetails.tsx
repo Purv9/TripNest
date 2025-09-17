@@ -31,82 +31,88 @@ import { cn } from "@/lib/utils";
 const packageDetails = {
   1: {
     id: 1,
-    name: "Tropical Paradise Bali",
-    description: "Experience the magic of Bali with pristine beaches, ancient temples, and vibrant culture. This comprehensive tour takes you through the most beautiful and culturally rich destinations in Bali.",
+    name: "Golden Triangle Heritage Tour",
+    description: "Experience the magic of India's Golden Triangle with magnificent monuments, rich history, and vibrant culture. This comprehensive tour takes you through Delhi, Agra, and Jaipur - India's most iconic heritage circuit.",
     images: [
-      "/src/assets/package-bali.jpg",
-      "/src/assets/destination-bali.jpg",
-      "/src/assets/package-bali-2.jpg"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     ],
-    price: 899,
-    duration: "7 Days",
+    price: 45999,
+    duration: "8 Days",
     maxGroupSize: 12,
     rating: 4.8,
-    reviews: 127,
-    theme: "Beach",
-    location: "Bali, Indonesia",
+    reviews: 327,
+    theme: "Heritage",
+    location: "Delhi, Agra, Jaipur",
     highlights: [
-      "Visit iconic Tanah Lot Temple",
-      "Explore Ubud's rice terraces",
-      "Relax on pristine Seminyak beaches", 
-      "Traditional Balinese cooking class",
-      "Sunrise at Mount Batur"
+      "Visit the iconic Taj Mahal",
+      "Explore Red Fort and India Gate in Delhi",
+      "Discover Amber Fort and City Palace in Jaipur", 
+      "Traditional Indian cuisine experiences",
+      "Heritage hotel accommodations"
     ],
     itinerary: [
       {
         day: 1,
-        title: "Arrival in Denpasar",
-        description: "Airport pickup and transfer to hotel in Seminyak. Welcome dinner at beachfront restaurant.",
-        activities: ["Airport transfer", "Hotel check-in", "Welcome dinner", "Beach walk"]
+        title: "Arrival in Delhi",
+        description: "Airport pickup and transfer to heritage hotel. Welcome dinner with traditional Indian cuisine.",
+        activities: ["Airport transfer", "Hotel check-in", "Welcome dinner", "Delhi orientation"]
       },
       {
         day: 2,
-        title: "Ubud Cultural Tour",
-        description: "Explore the cultural heart of Bali with visits to art villages, rice terraces, and temples.",
-        activities: ["Tegallalang Rice Terraces", "Ubud Art Market", "Sacred Monkey Forest", "Traditional lunch"]
+        title: "Old Delhi Exploration",
+        description: "Explore the historic heart of Delhi with visits to Red Fort, Jama Masjid, and Chandni Chowk.",
+        activities: ["Red Fort", "Jama Masjid", "Chandni Chowk", "Rickshaw ride"]
       },
       {
         day: 3,
-        title: "Temple Hopping",
-        description: "Visit Bali's most spectacular temples including the iconic Tanah Lot.",
-        activities: ["Tanah Lot Temple", "Uluwatu Temple", "Kecak Fire Dance", "Sunset dinner"]
+        title: "New Delhi Sightseeing",
+        description: "Visit New Delhi's iconic monuments including India Gate and Humayun's Tomb.",
+        activities: ["India Gate", "Humayun's Tomb", "Lotus Temple", "Drive to Agra"]
       },
       {
         day: 4,
-        title: "Adventure Day",
-        description: "Early morning trek to Mount Batur for sunrise, followed by hot springs relaxation.",
-        activities: ["Mount Batur sunrise trek", "Natural hot springs", "Coffee plantation visit", "Rest afternoon"]
+        title: "Taj Mahal & Agra Fort",
+        description: "Early morning visit to the Taj Mahal for sunrise, followed by Agra Fort exploration.",
+        activities: ["Taj Mahal sunrise", "Agra Fort", "Marble inlay workshop", "Local cuisine lunch"]
       },
       {
         day: 5,
-        title: "Beach & Water Activities",
-        description: "Enjoy water sports and beach relaxation at Nusa Dua.",
-        activities: ["Water sports", "Beach relaxation", "Spa treatment", "Beachfront dining"]
+        title: "Journey to Jaipur",
+        description: "Drive to Jaipur with a stop at Fatehpur Sikri, the abandoned Mughal city.",
+        activities: ["Fatehpur Sikri", "Drive to Jaipur", "Hotel check-in", "Local market visit"]
       },
       {
         day: 6,
-        title: "Cooking & Shopping",
-        description: "Learn to cook traditional Balinese dishes and shop for souvenirs.",
-        activities: ["Cooking class", "Local market tour", "Shopping at Sukawati", "Farewell dinner"]
+        title: "Jaipur City Tour",
+        description: "Explore the Pink City with visits to City Palace, Hawa Mahal, and local bazaars.",
+        activities: ["City Palace", "Hawa Mahal", "Jantar Mantar", "Local handicraft shopping"]
       },
       {
         day: 7,
+        title: "Amber Fort & Departure",
+        description: "Visit the magnificent Amber Fort and transfer to airport for departure.",
+        activities: ["Amber Fort", "Elephant ride", "Hotel checkout", "Airport transfer"]
+      },
+      {
+        day: 8,
         title: "Departure",
-        description: "Final breakfast and airport transfer for departure.",
-        activities: ["Hotel checkout", "Last-minute shopping", "Airport transfer"]
+        description: "Final breakfast and departure from Delhi.",
+        activities: ["Return to Delhi", "Final shopping", "Airport departure"]
       }
     ],
     inclusions: [
-      "Round-trip flights",
-      "7 nights accommodation (4-star hotels)",
-      "Daily breakfast and 4 dinners",
+      "Domestic flights",
+      "7 nights accommodation (heritage hotels)",
+      "Daily breakfast and 6 dinners",
       "Private air-conditioned transport",
       "English-speaking guide",
-      "All entrance fees",
+      "All monument entrance fees",
       "Airport transfers"
     ],
     exclusions: [
-      "International flights to Indonesia",
+      "International flights to India",
       "Lunch on most days",
       "Personal expenses",
       "Travel insurance",
@@ -370,7 +376,7 @@ const PackageDetails = () => {
                 <CardTitle className="flex items-center justify-between">
                   Book This Package
                   <div className="text-right">
-                    <div className="text-2xl font-bold text-primary">${packageData.price}</div>
+                    <div className="text-3xl font-bold text-primary mb-2">₹{packageData.price.toLocaleString()}</div>
                     <div className="text-sm text-muted-foreground">per person</div>
                   </div>
                 </CardTitle>

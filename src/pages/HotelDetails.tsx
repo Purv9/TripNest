@@ -23,53 +23,53 @@ const HotelDetails = () => {
   // Mock hotel data - in real app this would come from API
   const hotel = {
     id: 1,
-    name: "Santorini Blue Dome Resort",
-    location: "Oia, Santorini",
-    country: "Greece",
-    image: santoriniImage,
+    name: "The Oberoi Udaivilas",
+    location: "Udaipur, Rajasthan",
+    country: "India",
+    image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     gallery: [santoriniImage, baliImage, alpsImage, santoriniImage],
-    pricePerNight: 450,
+    pricePerNight: 35000,
     rating: 4.9,
     reviewCount: 1247,
     stars: 5,
-    type: "Resort",
-    description: "Luxury resort with iconic blue domes overlooking the Aegean Sea and spectacular sunset views.",
-    longDescription: "Experience the epitome of Greek island luxury at Santorini Blue Dome Resort. Perched on the dramatic cliffs of Oia, our resort offers breathtaking views of the Aegean Sea and the world-famous Santorini sunsets. Each suite features traditional Cycladic architecture with modern amenities, private terraces, and infinity pools that seem to merge with the endless blue horizon.",
+    type: "Palace Hotel",
+    description: "Magnificent palace hotel overlooking Lake Pichola with traditional Rajasthani architecture and royal hospitality.",
+    longDescription: "Experience the epitome of Indian royal luxury at The Oberoi Udaivilas. Set on the banks of Lake Pichola, our palace hotel offers breathtaking views of the lake and the majestic City Palace. Each suite features traditional Rajasthani architecture with modern amenities, private courtyards, and terraces that overlook the serene waters and historic palaces.",
     amenities: [
       "Free High-Speed WiFi",
-      "Infinity Pool",
+      "Swimming Pool",
       "Full-Service Spa",
       "Fine Dining Restaurant",
       "Airport Transfer",
       "24/7 Concierge",
       "Fitness Center",
-      "Private Beach Access",
+      "Lake View Rooms",
       "Room Service",
       "Laundry Service",
       "Business Center",
-      "Wedding Services"
+      "Royal Wedding Services"
     ],
     roomTypes: [
       {
-        name: "Deluxe Sea View Suite",
+        name: "Deluxe Lake View Suite",
         size: "45 sqm",
         occupancy: "2 guests",
-        price: 450,
-        features: ["Sea View", "Private Balcony", "King Bed", "Marble Bathroom"]
+        price: 35000,
+        features: ["Lake View", "Private Balcony", "King Bed", "Marble Bathroom"]
       },
       {
-        name: "Premium Infinity Suite",
+        name: "Premium Palace Suite",
         size: "65 sqm", 
         occupancy: "2 guests",
-        price: 680,
-        features: ["Private Infinity Pool", "Sea View", "Living Area", "Premium Amenities"]
+        price: 50000,
+        features: ["Private Courtyard", "Lake View", "Living Area", "Premium Amenities"]
       },
       {
-        name: "Presidential Villa",
+        name: "Royal Villa",
         size: "120 sqm",
         occupancy: "4 guests", 
-        price: 1200,
-        features: ["Private Villa", "Infinity Pool", "Butler Service", "Panoramic Views"]
+        price: 85000,
+        features: ["Private Villa", "Private Pool", "Butler Service", "Panoramic Lake Views"]
       }
     ],
     policies: {
@@ -78,41 +78,41 @@ const HotelDetails = () => {
       cancellation: "Free cancellation up to 48 hours before arrival",
       pets: "Pets not allowed",
       smoking: "Non-smoking property",
-      ageRestriction: "Adults only (18+)"
+      ageRestriction: "Family friendly"
     },
     location_details: {
-      address: "Oia Village, Santorini 84702, Greece",
+      address: "Hardasji Ki Magri, Udaipur 313001, Rajasthan, India",
       nearbyAttractions: [
-        { name: "Oia Castle", distance: "0.2 km" },
-        { name: "Amoudi Bay", distance: "0.5 km" },
-        { name: "Santorini Airport", distance: "17 km" },
-        { name: "Fira Town", distance: "11 km" }
+        { name: "City Palace", distance: "2 km" },
+        { name: "Lake Pichola", distance: "0.1 km" },
+        { name: "Udaipur Airport", distance: "25 km" },
+        { name: "Jagdish Temple", distance: "3 km" }
       ]
     },
     reviews: [
       {
         id: 1,
-        user: "Emma Thompson",
+        user: "Priya Mehta",
         avatar: "/api/placeholder/40/40",
         rating: 5,
         date: "March 2024",
-        comment: "Absolutely magical! The sunset views from our suite were breathtaking. The staff went above and beyond to make our honeymoon special. The infinity pool felt like floating in the sky!"
+        comment: "Absolutely magical! The lake views from our suite were breathtaking. The staff went above and beyond to make our anniversary special. The royal treatment was unforgettable!"
       },
       {
         id: 2,
-        user: "James Wilson", 
+        user: "Vikram Singh", 
         avatar: "/api/placeholder/40/40",
         rating: 5,
         date: "February 2024",
-        comment: "Perfect location in Oia with stunning architecture. The restaurant serves incredible Greek cuisine with a modern twist. Worth every penny for this once-in-a-lifetime experience."
+        comment: "Perfect location in Udaipur with stunning Rajasthani architecture. The restaurant serves incredible Indian cuisine with royal presentation. Worth every penny for this royal experience."
       },
       {
         id: 3,
-        user: "Sofia Martinez",
+        user: "Kavita Sharma",
         avatar: "/api/placeholder/40/40", 
         rating: 4,
         date: "January 2024",
-        comment: "Beautiful hotel with amazing views. The spa treatments were divine and the staff was very attentive. Only minor issue was the wind can be strong on the terrace."
+        comment: "Beautiful palace hotel with amazing lake views. The spa treatments were divine and the staff was very attentive. The royal hospitality was exceptional."
       }
     ]
   };
