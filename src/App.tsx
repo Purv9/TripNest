@@ -10,6 +10,8 @@ import Destinations from "./pages/Destinations";
 import DestinationDetails from "./pages/DestinationDetails";
 import Packages from "./pages/Packages";
 import PackageDetails from "./pages/PackageDetails";
+import Hotels from "./pages/Hotels";
+import HotelDetails from "./pages/HotelDetails";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,8 +31,9 @@ const App = () => (
               <Route path="/destinations/:id" element={<DestinationDetails />} />
               <Route path="/packages" element={<Packages />} />
               <Route path="/packages/:id" element={<PackageDetails />} />
+              <Route path="/hotels" element={<Hotels />} />
+              <Route path="/hotels/:id" element={<HotelDetails />} />
               {/* Placeholder routes for future pages */}
-              <Route path="/hotels" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-muted-foreground">Hotels - Coming Soon</h1></div>} />
               <Route path="/blog" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-muted-foreground">Travel Blog - Coming Soon</h1></div>} />
               <Route path="/contact" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-muted-foreground">Contact - Coming Soon</h1></div>} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
