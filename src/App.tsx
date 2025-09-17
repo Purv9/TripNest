@@ -8,6 +8,8 @@ import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
 import Destinations from "./pages/Destinations";
 import DestinationDetails from "./pages/DestinationDetails";
+import Packages from "./pages/Packages";
+import PackageDetails from "./pages/PackageDetails";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,8 +27,9 @@ const App = () => (
               <Route path="/" element={<Home />} />
               <Route path="/destinations" element={<Destinations />} />
               <Route path="/destinations/:id" element={<DestinationDetails />} />
+              <Route path="/packages" element={<Packages />} />
+              <Route path="/packages/:id" element={<PackageDetails />} />
               {/* Placeholder routes for future pages */}
-              <Route path="/packages" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-muted-foreground">Tour Packages - Coming Soon</h1></div>} />
               <Route path="/hotels" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-muted-foreground">Hotels - Coming Soon</h1></div>} />
               <Route path="/blog" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-muted-foreground">Travel Blog - Coming Soon</h1></div>} />
               <Route path="/contact" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-muted-foreground">Contact - Coming Soon</h1></div>} />
